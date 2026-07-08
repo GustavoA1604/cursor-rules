@@ -14,3 +14,6 @@ alwaysApply: true
 - **Authorization before changes:** Do not change code without explicit authorization. Ask before modifying anything.
 - **Commits:** Only humans do commits. The assistant must not run git commit or push.
 - **No emojis:** Do not use emojis in responses, code, or comments.
+- **No Asana ticket names:** Never add Asana ticket names or references anywhere, including code comments, documentation, and `CHANGELOG.md`.
+- **Keep touched comments fresh:** When you touch code, remove or update any nearby comments that are stale, inconsistent with the code, or too verbose.
+- **Test every behavior change:** For every behavior that is added, changed, or fixed, add a test at the appropriate level (unit, integration, or end-to-end).

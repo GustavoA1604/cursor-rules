@@ -1,0 +1,13 @@
+---
+description: Testing and verification requirements for qvac-ext-lib-whisper.cpp changes
+globs: **/qvac-ext-lib-whisper.cpp/**
+alwaysApply: false
+---
+
+# qvac-ext-lib-whisper.cpp changes
+
+- **Add tests:** Add tests for every new model, quantization, feature, fix, or change.
+- **End-to-end verification:** Once the work is complete, verify it end to end against the `qvac/` repo. Don't do this yourself unless authorized, but coordinate with the developer to:
+  - Push the changes to their fork of `qvac-ext-lib-whisper.cpp`.
+  - Push the corresponding changes to their fork of `qvac-registry-vcpkg`.
+  - Push a branch to the `tetherto/qvac` repo to exercise the relevant `on-pr-*` workflow.
