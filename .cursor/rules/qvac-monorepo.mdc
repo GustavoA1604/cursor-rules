@@ -1,0 +1,11 @@
+---
+description: Documentation requirements for root and package changes in the qvac monorepo
+globs: **/qvac/**
+alwaysApply: false
+---
+
+# qvac monorepo changes
+
+- **Keep both README levels current:** When a change affects documented behavior, setup, public functionality, supported features, examples, or usage, update both the root `README.md` and every affected package's `README.md`.
+- **Verify documentation during review:** For every review, check whether the root `README.md` and each affected package `README.md` remain accurate and complete. Treat missing applicable updates as review findings.
+- **Apply package-specific rules:** For changes under `qvac/packages/**`, also follow `qvac-packages.mdc`.
