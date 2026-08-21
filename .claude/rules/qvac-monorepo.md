@@ -1,10 +1,6 @@
----
-description: PR source gate and documentation requirements for root and package changes in the qvac monorepo
-globs: **/qvac/**
-alwaysApply: false
----
-
 # qvac monorepo changes
+
+Scope: `**/qvac/**`
 
 ## Pull requests
 
@@ -18,4 +14,4 @@ alwaysApply: false
 
 ## Related rules
 
-- **Apply package-specific rules:** For changes under `qvac/packages/**`, also follow `qvac-packages.mdc`.
+- **Apply package-specific rules:** For changes under `qvac/packages/**`, also read and follow `.claude/rules/qvac-packages.md`.
