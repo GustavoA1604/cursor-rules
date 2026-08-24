@@ -35,3 +35,19 @@ given by the glob in the left column.
 | `**/qvac/packages/**`             | `.claude/rules/qvac-packages.md`        |
 | `**/qvac-registry-vcpkg/**`       | `.claude/rules/qvac-registry-vcpkg.md`  |
 | `**/qvac-ext-lib-whisper.cpp/**`  | `.claude/rules/qvac-whisper-cpp.md`     |
+
+# Reviewing pull requests
+
+Three tools separate the concerns. All three apply the rules above as review checks
+rather than restating them, and share one engine (`pr-review-core`) that keeps cheap PRs
+cheap: it triages first and only fans out subagents when a change is broad or risky (a
+version bump never spawns a review fleet).
+
+| Task | Use |
+|---|---|
+| Coding standards, enforced while coding and verified at review | The rule files above |
+| Review your OWN branch before pushing, then fix and loop until clean | `pr-self-review` skill (may modify code) |
+| Review someone ELSE's PR and produce inline comments | `pr-review` skill (comments only, never fixes) |
+
+The self-review loop is what makes the team self-sufficient: run it before requesting a
+human review so a reviewer rarely finds anything left to fix.
