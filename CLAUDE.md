@@ -34,7 +34,7 @@ given by the glob in the left column.
 | `**/qvac/**`                      | `.claude/rules/qvac-monorepo.md`        |
 | `**/qvac/packages/**`             | `.claude/rules/qvac-packages.md`        |
 | `**/qvac-registry-vcpkg/**`       | `.claude/rules/qvac-registry-vcpkg.md`  |
-| `**/qvac-ext-lib-whisper.cpp/**`  | `.claude/rules/qvac-whisper-cpp.md`     |
+| `**/qvac-fabric-speech.cpp/**` or `**/qvac-ext-lib-whisper.cpp/**` | `.claude/rules/qvac-whisper-cpp.md` |
 
 # Reviewing pull requests
 
