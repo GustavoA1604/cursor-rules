@@ -1,7 +1,7 @@
 ---
 name: pr-review
 description: Review someone else's pull request and produce inline review comments. Comments only — it never edits, fixes, or pushes code. Use when reviewing a PR, given a PR link, or writing code-review feedback.
-argument-hint: "<PR#|PR-URL|branch>"
+argument-hint: "<PR#|PR-URL|branch> [more...]"
 ---
 
 # PR review
@@ -19,10 +19,12 @@ fix your own branch, use `pr-self-review` instead.
 
 ## Inputs
 
-- Required: a PR number, PR URL, or branch name. If missing, ask for it.
+- Required: one or more PR numbers, PR URLs, or branch names. If missing, ask for them.
 - Optional: reviewer notes seeding focus areas.
 - Get the diff: `gh pr diff <num>` (PR) or `git diff main...<branch>` (branch). If empty,
   report "No changes to review" and stop.
+- When given multiple PRs, fetch, triage, review, and verify each PR independently. Do not
+  combine their diffs, risk tiers, or findings.
 
 ## Workflow
 
@@ -68,7 +70,11 @@ For each finding:
 - Severity is required and is exactly one of: `critical`, `medium`, `low`, or `nit`.
 - Use `[coding-standards]` immediately after the severity only when the finding comes from
   the team coding standards. Use the matching rule name as the source tag for other rules.
-- Do not add headings or summaries around the findings.
+- For a single PR, do not add headings or summaries around the findings.
+- For multiple PRs, preserve the input order and put each PR's findings under a
+  `## PR <number or branch>` heading. Keep each finding wholly within its PR section so
+  that section can be copied independently. Write `No issues` in a PR section with no
+  findings. Add no other headings or cross-PR summary.
 
 ## Guardrails
 

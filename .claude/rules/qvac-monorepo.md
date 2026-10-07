@@ -4,8 +4,8 @@ Scope: `**/qvac/**`
 
 ## Pull requests
 
-- **Open from a monorepo branch, never a fork:** Every PR against the qvac monorepo must be opened from a branch in the monorepo (`tetherto/qvac`), not from a fork.
-- **Check the PR source first, before any review:** The first step in reviewing any qvac PR is to confirm it was opened from a monorepo branch. If it was opened from a fork, stop immediately: do not review the changes, and ask the author to reopen the PR from a branch in the monorepo.
+- **Speech-team branches stay in the monorepo:** PRs authored by `Zbig9000`, `ogad-tether`, `freddy311082`, `ishanvohra2`, `RamazTs`, `Alok-Ranjan23`, `pratiknarola-t`, or `mexxik` must be opened from a branch in the monorepo (`tetherto/qvac`), not from a fork.
+- **Check the PR source and author first:** If a qvac PR was opened from a fork and its author's GitHub login matches one of the listed speech-team accounts, case-insensitively, stop immediately: do not review the changes, and ask the author to reopen the PR from a branch in the monorepo. Continue reviewing fork PRs from all other authors normally.
 
 ## Documentation
 
